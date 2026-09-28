@@ -1,0 +1,91 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>
+.grid{display:grid;grid-template-columns:330px 1fr 330px;gap:18px;margin-top:18px}
+.col{display:flex;flex-direction:column;gap:12px}
+.core{border:2px solid var(--ai);border-radius:16px;padding:16px;background:#fff;display:flex;flex-direction:column;gap:10px}
+.core>.lbl{font-weight:700;color:var(--ai);font-size:19px;display:flex;justify-content:space-between;align-items:center}
+.row{display:grid;gap:10px}
+.r2{grid-template-columns:1fr 1fr}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;margin-top:18px}
+.step{flex:1;text-align:center;border-radius:10px;padding:10px 4px;font-weight:700;font-size:14px;border:1px solid var(--line);background:#fff}
+.step.hu{background:var(--human-bg);border-color:var(--human-line);color:var(--human)}
+.step.ai{background:var(--ai-bg);border-color:var(--ai-line);color:var(--ai)}
+.step.rt{background:#eef7f0;border-color:#b9dcc4;color:var(--ok)}
+.fa{color:var(--muted);font-size:18px}
+.side-arrow{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;gap:6px}
+.evo{display:flex;gap:6px;flex-wrap:wrap;font-size:13px}
+.evo span{background:#fff;border:1px solid var(--ai-line);border-radius:6px;padding:2px 7px}
+</style></head><body>
+<div class="head"><div><h1>OCEALITE Organization OS　全体像</h1>
+<div class="sub">人間が未来を決め、AIがその未来を実現するための組織を自ら形成し、実行し、学習し、進化する（93章）</div></div>
+<div class="brand"><b>Project Brief 対応図</b><br>Concept Draft / 2026年9月</div></div>
+
+<div class="purpose">
+ <div><div class="l">AIの存在目的（108章）<span class="chip c-ok" style="margin-left:6px">方針</span></div>
+ <div class="q">組織が経済的に持続的成長できるようにし、人を幸せにする</div></div>
+ <div style="text-align:right"><div class="l">2046 Vision（2章）</div><div class="q" style="font-size:20px">対象市場で世界TOP</div>
+ <div class="small" style="color:#c7cede">市場の定義・TOPの測り方は未決定</div></div>
+</div>
+
+<div class="grid">
+ <div class="col">
+  <div class="card h"><div class="t">Human　未来を決める <span class="chip c-ok">方針</span></div>
+   <div class="pills"><span class="pill">Vision</span><span class="pill">Purpose</span><span class="pill">Values</span><span class="pill">Listening</span><span class="pill">Empathy</span><span class="pill">Relationship</span><span class="pill">Inspiration</span><span class="pill">Negotiation</span><span class="pill">Creation</span><span class="pill">Judgment</span></div></div>
+  <div class="card h"><div class="t">CEO / Founder</div>
+   <div class="small" style="color:var(--ink)">管理ではなく、Visionをつくる・人と会う・話を聞く・人を巻き込む・重大な決断をする（9章）</div></div>
+  <div class="card h"><div class="t">Human Sovereignty</div>
+   <div class="small" style="color:var(--ink)">Purpose・Vision・Values・重大な意思決定の主権は人に残す（5章）</div></div>
+  <div class="side-arrow">Vision・Policy・Budget・Authority・Risk Limit・Data Scope を渡す →</div>
+ </div>
+
+ <div class="core">
+  <div class="lbl"><span>Organization OS</span><span class="small">AIが組織を形成・実行・学習・進化</span></div>
+  <div class="card a"><div class="t">AI Chief of Staff <span class="chip c-hyp">仮説</span></div>
+   <div class="small" style="color:var(--ink)">意図の理解・要約・委任・例外管理。人へは判断事項・Risk・Progress・Returnだけを上げる（29, 54章）</div></div>
+  <div class="row r2">
+   <div class="card a"><div class="t">Vision Coaching Team</div><div class="small" style="color:var(--ink)">正解を渡さず、経営者の中のVisionを引き出す（10–12章）</div></div>
+   <div class="card a"><div class="t">Strategy Team</div><div class="small" style="color:var(--ink)">Market・Technology・Finance・Scale・Scenario・Red Team（13–14章）</div></div>
+  </div>
+  <div class="card a"><div class="t">AI Organization Designer ＋ Agent Factory</div>
+   <div class="small" style="color:var(--ink)">Decisionから必要能力を分解し、AI Teamを動的に編成・生成・再編（15–17, 22章）。自己増殖はBudget・Permission・Lifetime等で制約（21章）</div></div>
+  <div class="card a"><div class="t">AI Teams（動的）</div>
+   <div class="evo"><span>KEEP</span><span>IMPROVE</span><span>CLONE</span><span>SPLIT</span><span>MERGE</span><span>REASSIGN</span><span>RETIRE</span></div>
+   <div class="small" style="margin-top:6px;color:var(--ink)">成功構造は Organization DNA として他市場へ（26章 <span class="chip c-hyp">仮説</span>）</div></div>
+  <div class="card k"><div class="t">Organization Kernel　OCEALITEが所有する中核 <span class="chip c-ok">方針</span></div>
+   <div class="pills"><span class="pill">Purpose / Vision / Values</span><span class="pill">Policies</span><span class="pill">Decision Rights</span><span class="pill">Decision Log</span><span class="pill">Organization Graph</span><span class="pill">Agent / Skill / Model Registry</span><span class="pill">Memory</span><span class="pill">Budget</span><span class="pill">Return Metrics</span><span class="pill">Evolution History</span></div>
+   <div class="small" style="margin-top:6px">特定のModelに依存させない。Modelは交換可能な知能エンジン（41, 67章）</div></div>
+ </div>
+
+ <div class="col">
+  <div class="card" style="border-color:#b9dcc4;background:#eef7f0"><div class="t" style="color:var(--ok)">Return Architecture <span class="chip c-ok">方針</span></div>
+   <div class="pills"><span class="pill">ROA</span><span class="pill">ROIC</span><span class="pill">ROAI</span><span class="pill">Return on Compute</span><span class="pill">Revenue per Human</span><span class="pill">ROO <span class="chip c-hyp">仮説</span></span></div>
+   <div class="small" style="margin-top:6px;color:var(--ink)">「動いたか」ではなく、投入資源に対するReturnで評価（30–40章）</div></div>
+  <div class="card" style="border-color:#b9dcc4;background:#eef7f0"><div class="t" style="color:var(--ok)">人の幸せ <span class="chip c-ok">方針</span></div>
+   <div class="small" style="color:var(--ink)">月1回の本人申告＋1on1で測る。行動データから感情を推定しない（108-4）<br>対象：経営者 → 社員 → 顧客・Partner → 地域</div></div>
+  <div class="card a"><div class="t">自己進化ループ <span class="chip c-ok">方針</span></div>
+   <div class="small" style="color:var(--ink)">Observe → Evaluate → Hypothesis → Variant → Sandbox → Test → Risk評価 → Deploy。本番での自由な自己書換えはしない（18–19章）</div></div>
+  <div class="side-arrow">← 判断事項・Risk・Exceptionだけを人へ</div>
+ </div>
+</div>
+
+<div class="flow">
+ <div class="step hu">Vision</div><span class="fa">→</span>
+ <div class="step ai">Coaching</div><span class="fa">→</span>
+ <div class="step hu">Decision</div><span class="fa">→</span>
+ <div class="step ai">AI Strategy</div><span class="fa">→</span>
+ <div class="step ai">Team Formation</div><span class="fa">→</span>
+ <div class="step ai">Execution</div><span class="fa">→</span>
+ <div class="step rt">Result</div><span class="fa">→</span>
+ <div class="step rt">Return Measurement</div><span class="fa">→</span>
+ <div class="step ai">Learning</div><span class="fa">↺</span>
+</div>
+<div class="small" style="text-align:center;margin-top:6px">PoCで最初に検証する経営Loop（72章 <span class="chip c-hyp">仮説</span>）</div>
+
+<div class="legend">
+ <span><i class="sw" style="background:var(--human-bg)"></i>Human</span>
+ <span><i class="sw" style="background:var(--ai-bg)"></i>AI</span>
+ <span><i class="sw" style="background:var(--kernel)"></i>Organization Kernel</span>
+ <span><i class="sw" style="background:#eef7f0"></i>Return・幸せ</span>
+ <span><span class="chip c-ok">方針</span> 採用済み</span><span><span class="chip c-hyp">仮説</span> 要検証</span><span><span class="chip c-und">未決定</span> 比較・検討中</span>
+</div>
+</body></html>

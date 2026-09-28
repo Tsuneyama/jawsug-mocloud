@@ -6,6 +6,13 @@
 - 基準日: 2026年9月
 - 目的: OCEALITEの20年成長を支える、人間とAIによる新しい経営・組織基盤を設計する
 
+**図**（`images/`、元データは `images/src/`）
+
+- [全体像](images/01-overview.png)
+- [システム構成](images/02-system.png)
+- [コミュニケーションデザイン](images/03-communication.png)
+- [人とAIの役割](images/04-roles.png)
+
 ---
 
 ## 0. この文書の読み方

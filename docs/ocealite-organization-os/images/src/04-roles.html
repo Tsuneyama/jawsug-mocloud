@@ -1,0 +1,99 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+.role{background:#fff;border-radius:8px;padding:7px 10px;font-size:13px;border:1px solid var(--line)}
+.h .role{border-color:var(--human-line)} .a .role{border-color:var(--ai-line)}
+.role b{display:block;font-size:14.5px}
+.h .role b{color:var(--human)} .a .role b{color:var(--ai)}
+.spec{margin-top:18px}
+.bar{display:grid;grid-template-columns:1fr 1fr 1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.bar>div{padding:12px 14px;font-size:13.5px}
+.bar .t{font-size:16px}
+.b1{background:var(--human-bg)} .b1 .t{color:var(--human)}
+.b2{background:linear-gradient(90deg,var(--human-bg),var(--ai-bg))} .b2 .t{color:#6a4f8f}
+.b3{background:var(--ai-bg)} .b3 .t{color:var(--ai)}
+.grad{height:8px;border-radius:4px;background:linear-gradient(90deg,var(--human),#9b7bb8,var(--ai));margin:8px 0 4px}
+.gl{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)}
+.happy{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin-top:18px}
+.phase{display:flex;align-items:center;gap:6px;margin-top:8px}
+.ph{flex:1;text-align:center;border-radius:8px;padding:8px 2px;font-weight:700;font-size:13.5px;background:#fff;border:1px solid #b9dcc4;color:var(--ok)}
+.ph.on{background:var(--ok);color:#fff}
+.pa{color:var(--muted)}
+.gc{background:#eef7f0;border-color:#b9dcc4} .gc .t{color:var(--ok)}
+.core{margin-top:18px;display:grid;grid-template-columns:1fr 80px 1fr;align-items:center;gap:10px}
+.core .mid{text-align:center;font-size:26px;color:var(--muted)}
+</style></head><body>
+<div class="head"><div><h1>人とAIの役割</h1>
+<div class="sub">人が未来を決め、AIがその未来を実現する。AIの目的は、組織の持続的な経済成長と、人の幸せ（1, 5–9, 108章）</div></div>
+<div class="brand"><b>OCEALITE Organization OS</b><br>Never Make Human Learning Speed the Scaling Limit（28章）</div></div>
+
+<div class="two">
+ <div class="card h"><div class="t" style="font-size:20px">Human の役割 <span class="chip c-ok">方針</span></div>
+  <div class="roles">
+   <div class="role"><b>Vision</b>未来を描く</div>
+   <div class="role"><b>Purpose</b>なぜ会社が存在するかを決める</div>
+   <div class="role"><b>Values</b>何を守り、大切にするかを決める</div>
+   <div class="role"><b>Listening</b>顧客・社員・Partner・社会の声を直接聞く</div>
+   <div class="role"><b>Empathy</b>数字や言葉にならない感情を理解する</div>
+   <div class="role"><b>Relationship</b>信頼関係を築く</div>
+   <div class="role"><b>Inspiration</b>人の心を動かす</div>
+   <div class="role"><b>Negotiation</b>異なる利害を調整する</div>
+   <div class="role"><b>Creation</b>まだない問いや未来をつくる</div>
+   <div class="role"><b>Judgment</b>責任を持って重大な決断をする</div>
+  </div>
+  <div class="small" style="margin-top:8px;color:var(--ink)">なぜ人か：AIは責任を負えない・記録されない情報に触れられない・人からの信頼は置き換えられない（106章 <span class="chip c-hyp">仮説</span>）</div>
+ </div>
+ <div class="card a"><div class="t" style="font-size:20px">AI の役割 <span class="chip c-ok">方針</span></div>
+  <div class="roles">
+   <div class="role"><b>Research</b>市場・競合・顧客・規制の調査</div>
+   <div class="role"><b>Analysis</b>データ・財務・リスクの分析</div>
+   <div class="role"><b>Planning</b>戦略・計画の立案</div>
+   <div class="role"><b>Simulation</b>複数の未来シナリオ・Red Team</div>
+   <div class="role"><b>Execution</b>Vision・Policy・Budgetの範囲で自律実行</div>
+   <div class="role"><b>Monitoring</b>進捗・Return・Riskの監視</div>
+   <div class="role"><b>Optimization</b>Model・予算・タスク配分の最適化</div>
+   <div class="role"><b>Organization Design</b>Decisionに応じてAI Teamを編成</div>
+   <div class="role"><b>Replication</b>制約つきでAgentを増やす</div>
+   <div class="role"><b>Evolution</b>Agent・Team・組織を進化させる</div>
+  </div>
+  <div class="small" style="margin-top:8px;color:var(--ink)">注意：自信ありげに間違える・同調しやすい・外から操作されやすい。確信度の自己申告に頼らない（106章 <span class="chip c-hyp">仮説</span>）</div>
+ </div>
+</div>
+
+<div class="spec">
+ <div class="t" style="font-size:18px">Decision Rights　誰が決めるか <span class="chip c-hyp">仮説</span>（7章）</div>
+ <div class="grad"></div>
+ <div class="gl"><span>Humanが決める</span><span>Human＋AI</span><span>AIへ委譲</span></div>
+ <div class="bar" style="margin-top:6px">
+  <div class="b1"><div class="t">Constitutional</div>Purpose・Vision・Values・AIにさせないこと・重大な倫理判断</div>
+  <div class="b2"><div class="t">Strategic</div>新市場参入・大型投資・M&A・撤退・資本政策。AIが分析・シミュレーションし、人が決断</div>
+  <div class="b3"><div class="t">Operational</div>調査・データ整理・Agent配置・定型分析・Model選択・一定範囲の予算最適化</div>
+ </div>
+ <div class="small" style="margin-top:6px">高Risk Action（支払い・契約・外部公開・人事・法的Action・大型投資）はHuman Approval（80章 <span class="chip c-ok">方針</span>）</div>
+</div>
+
+<div class="happy">
+ <div class="card gc"><div class="t">幸せの対象とフェーズ <span class="chip c-ok">方針</span>（108-1）</div>
+  <div class="phase"><div class="ph on">経営者</div><span class="pa">→</span><div class="ph">社員</div><span class="pa">→</span><div class="ph">顧客・Partner</div><span class="pa">→</span><div class="ph">地域</div></div>
+  <div class="small" style="margin-top:8px;color:var(--ink)">財務の安定度で事業ステージを区切り、対象を広げる。前の対象は最低限の枠を守り、重点を移す</div></div>
+ <div class="card gc"><div class="t">組織が守る枠 <span class="chip c-ok">方針</span>（108-2）</div>
+  <ul class="b" style="font-size:13.5px"><li>心身の健康と安全</li><li>尊厳と自己決定</li><li>成長と居場所の機会</li></ul>
+  <div class="small" style="margin-top:4px;color:var(--ink)">枠の上の「何が幸せか」は本人が決め、AIは支える</div></div>
+ <div class="card gc"><div class="t">成長と幸せの衝突 <span class="chip c-ok">方針</span>（108-3）</div>
+  <div style="font-size:13.5px"><b>取り消せない＋影響大</b> → 人が判断<br><b>取り消せる／影響小</b> → AIが判断し、定期的に経営者へ報告</div>
+  <div class="small" style="margin-top:4px;color:var(--ink)">判断と理由はDecision Dataとして記録</div></div>
+</div>
+
+<div class="core">
+ <div class="card h"><div class="t">人が「核」をつくる</div><div style="font-size:13.5px">伝えたい想い・世界観・審美的な方向・重大な決断</div></div>
+ <div class="mid">→</div>
+ <div class="card a"><div class="t">AIが「展開」する</div><div style="font-size:13.5px">大量の案出し・実装・改善・評価・学習。人の理解できる粒度まで抽象化して返す</div></div>
+</div>
+<div class="small" style="text-align:center;margin-top:6px">検証ケース1・2から得た分担の考え方（103–105章 <span class="chip c-hyp">仮説</span>）。AIが人と外部クリエイターも含めて編成する拡張は未採用</div>
+
+<div class="legend">
+ <span><i class="sw" style="background:var(--human-bg)"></i>Human</span><span><i class="sw" style="background:var(--ai-bg)"></i>AI</span><span><i class="sw" style="background:#eef7f0"></i>人の幸せ</span>
+ <span><span class="chip c-ok">方針</span></span><span><span class="chip c-hyp">仮説</span></span><span><span class="chip c-und">未決定</span></span>
+</div>
+</body></html>

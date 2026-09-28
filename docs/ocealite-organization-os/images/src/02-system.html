@@ -1,0 +1,118 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>
+.wrap{display:grid;grid-template-columns:1fr 300px;gap:18px}
+.stack{display:flex;flex-direction:column;gap:8px}
+.layer{display:grid;grid-template-columns:190px 1fr;gap:12px;align-items:stretch}
+.ln{border-radius:10px;padding:10px 12px;font-weight:700;font-size:15px;display:flex;flex-direction:column;justify-content:center;border:1px solid var(--line);background:#fff}
+.ln small{font-weight:400;font-size:12px;color:var(--muted);margin-top:2px}
+.body{display:flex;gap:8px;flex-wrap:wrap;align-items:stretch}
+.box{flex:1;min-width:140px;border-radius:10px;padding:9px 11px;border:1px solid var(--line);background:#fff;font-size:13.5px}
+.box b{display:block;font-size:14.5px;margin-bottom:2px}
+.lh .ln{color:var(--human);background:var(--human-bg);border-color:var(--human-line)}
+.lh .box{background:var(--human-bg);border-color:var(--human-line)}
+.la .ln{color:var(--ai);background:var(--ai-bg);border-color:var(--ai-line)}
+.la .box{background:var(--ai-bg);border-color:var(--ai-line)}
+.lg .ln{color:var(--gate);background:var(--gate-bg);border-color:#d8c3ee}
+.lg .box{background:var(--gate-bg);border-color:#d8c3ee}
+.lx .ln,.lx .box{background:var(--ext-bg)}
+.lx .ln{color:var(--ext)}
+.dn{text-align:center;color:var(--muted);font-size:13px;line-height:1.1}
+.kernel{background:var(--kernel);color:#fff;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.kernel .t{color:#fff}
+.kernel .small{color:#c7cede}
+.kernel .grp{border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:8px 10px;font-size:13px}
+.kernel .grp b{display:block;font-size:13.5px;margin-bottom:2px;color:#fff}
+.kernel .grp span{color:#c7cede}
+.cross{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}
+.cross .box{background:#fff;text-align:center}
+.bus{display:flex;align-items:center;gap:8px;margin-top:8px}
+</style></head><body>
+<div class="head"><div><h1>システム構成</h1>
+<div class="sub">Modelは交換可能な知能エンジン。SaaSとModelを直接結合せず、Kernelを中心に置く（41, 62, 66章）</div></div>
+<div class="brand"><b>OCEALITE Organization OS</b><br>製品・クラウドは未選定（69–70, 74章）</div></div>
+
+<div class="wrap">
+<div class="stack">
+ <div class="layer lh"><div class="ln">Human Interface<small>UIは未決定 <span class="chip c-und">未決定</span></small></div>
+  <div class="body">
+   <div class="box"><b>Chat</b>入口：質問・相談・日常の指示</div>
+   <div class="box"><b>Voice</b>深い思考：Coaching・内省</div>
+   <div class="box"><b>Decision Card</b>決断：承認・選択</div>
+   <div class="box"><b>Control Tower</b>経営：Vision進捗・Return・Risk・Evolution</div>
+  </div></div>
+ <div class="small" style="padding-left:202px;margin-top:-2px">候補：Slack / Google Chat / ChatGPT・ChatGPT Work / Web / Mobile / 独自UI（52章）　<span class="chip c-hyp">4分類は仮説</span></div>
+ <div class="dn">▼ ▲</div>
+
+ <div class="layer la"><div class="ln">AI Chief of Staff<small>Attention Architecture <span class="chip c-hyp">仮説</span></small></div>
+  <div class="body"><div class="box">Intent理解・要約・Delegation・Exception Management・Decision Request。人への情報量をAgent数と切り離す（54, 88–89章）</div></div></div>
+ <div class="dn">▼ ▲</div>
+
+ <div class="layer la"><div class="ln">Agent Layer<small>Agent ≠ Model</small></div>
+  <div class="body">
+   <div class="box"><b>AI Organization Designer</b>Goal → 能力分解 → Team設計 → 権限・予算・KPI</div>
+   <div class="box"><b>Agent Factory</b>生成 → Sandbox評価 → Production</div>
+   <div class="box"><b>AI Teams</b>Coaching / Strategy / 事業ごとの動的Team</div>
+   <div class="box"><b>Workflow Engine</b>長時間処理・承認待ち・Retry・Checkpoint <span class="chip c-und">未決定</span></div>
+  </div></div>
+ <div class="dn">▼ ▲</div>
+
+ <div class="layer la"><div class="ln">Model Intelligence Layer<small>No Model is Permanent</small></div>
+  <div class="body">
+   <div class="box"><b>Model Evaluator</b>Quality・Cost・Latency・Security・ROAI（44章）</div>
+   <div class="box"><b>Model Router</b>低リスク→低価格Model／高リスク→Frontier（45章）</div>
+   <div class="box"><b>Migration Manager</b>Checkpoint単位でModel変更（47章）</div>
+   <div class="box"><b>Prompt Compiler → Adapter</b>OpenAI / Claude / Gemini / Local / 未知のModel <span class="chip c-hyp">仮説</span></div>
+  </div></div>
+ <div class="dn">▼ Actionは必ずGatewayを通る</div>
+
+ <div class="layer lg"><div class="ln">Action Gateway<small><span class="chip c-hyp">仮説</span></small></div>
+  <div class="body">
+   <div class="box"><b>Policy / Permission</b>Least Privilege。Agent生成と権限生成を分離（78–79章）</div>
+   <div class="box"><b>Human Approval</b>支払い・契約・外部公開・人事・大型投資（80章）</div>
+   <div class="box"><b>Audit Log</b>誰が・何を・なぜ・どのModel・どのDataで（81章）</div>
+  </div></div>
+ <div class="dn">▼</div>
+
+ <div class="layer lx"><div class="ln">Integration Gateway<small>External Systems <span class="chip c-cand">候補</span></small></div>
+  <div class="body">
+   <div class="box"><b>Google Workspace</b>Gmail・Calendar・Drive・Sheets・Meet</div>
+   <div class="box"><b>Slack</b>会話・通知・承認</div>
+   <div class="box"><b>freee</b>会計・売上・経費・給与</div>
+   <div class="box"><b>kintone</b>顧客・案件・業務</div>
+   <div class="box"><b>GitHub</b>Issue・PR・Release</div>
+  </div></div>
+ <div class="bus">
+  <div class="box g" style="flex:1;border:1px dashed #b89ad8;background:var(--gate-bg)"><b style="color:var(--gate)">▲ Business Event Bus <span class="chip c-hyp">仮説</span></b>外部のEvent（入金・PR merge・受注など）→ Normalizer → 無視 / Memory更新 / Agent起動 / Workflow開始 / 人へ通知（64–65章）</div>
+ </div>
+</div>
+
+<div class="kernel">
+ <div class="t" style="font-size:19px">Organization Kernel <span class="chip c-ok">方針</span></div>
+ <div class="small">全レイヤーが読み書きする、OCEALITEが長期に所有する中核。特定Modelの内部に閉じ込めない（66–67章）</div>
+ <div class="grp"><b>Constitution</b><span>Purpose・Vision・Values・Policies・Decision Rights</span></div>
+ <div class="grp"><b>Decision</b><span>Decision Log・AI Recommendation・Human Decision・理由・Outcome（83章）</span></div>
+ <div class="grp"><b>Organization</b><span>Organization Graph・Agent / Skill / Model Registry・Organization DNA</span></div>
+ <div class="grp"><b>Organization Memory</b><span>Vision・Decision・Knowledge・Customer・Project・Agent・Evaluation（48章）</span></div>
+ <div class="grp"><b>Economics</b><span>Budget・Return Metrics（ROA / ROIC / ROAI）・幸せの集計（3人以上）</span></div>
+ <div class="grp"><b>Evolution</b><span>Evolution History・Evaluation Data・OCEALITE Work Benchmark（50章）</span></div>
+</div>
+</div>
+
+<div class="cross">
+ <div class="box"><b>Identity</b>人とAgentのID</div>
+ <div class="box"><b>Secret Management</b>認証情報</div>
+ <div class="box"><b>Observability</b>稼働・Cost・品質</div>
+ <div class="box"><b>Evaluation Platform</b>Benchmark・Shadow比較</div>
+ <div class="box"><b>MCP / A2A</b>Tool接続・Agent間通信 <span class="chip c-cand">候補</span></div>
+</div>
+<div class="small" style="margin-top:6px">横断基盤（74–76章）。いずれも特定製品に固定しない <span class="chip c-und">未決定</span></div>
+
+<div class="legend">
+ <span><i class="sw" style="background:var(--human-bg)"></i>Human向け</span>
+ <span><i class="sw" style="background:var(--ai-bg)"></i>AI</span>
+ <span><i class="sw" style="background:var(--gate-bg)"></i>統制（Gateway・Event）</span>
+ <span><i class="sw" style="background:var(--ext-bg)"></i>外部システム</span>
+ <span><i class="sw" style="background:var(--kernel)"></i>Kernel</span>
+ <span><span class="chip c-ok">方針</span></span><span><span class="chip c-hyp">仮説</span></span><span><span class="chip c-und">未決定</span></span><span><span class="chip c-cand">候補</span></span>
+</div>
+</body></html>

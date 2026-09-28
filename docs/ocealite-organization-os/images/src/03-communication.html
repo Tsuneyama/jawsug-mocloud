@@ -1,0 +1,85 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><link rel="stylesheet" href="common.css">
+<style>
+.actors{display:grid;grid-template-columns:1fr 230px 1fr 230px 1fr;align-items:center;gap:0}
+.actor{border-radius:16px;padding:16px;min-height:190px}
+.actor .t{font-size:20px}
+.conn{display:flex;flex-direction:column;gap:10px;padding:0 10px;font-size:13px}
+.conn .ar{border-radius:8px;padding:7px 9px;background:#fff;border:1px solid var(--line)}
+.conn .ar b{display:block;font-size:13.5px}
+.conn .r{text-align:right}
+.people{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.person{display:flex;flex-direction:column;align-items:center;font-size:12.5px;color:var(--human);font-weight:700}
+.dot{width:34px;height:34px;border-radius:50%;background:var(--human);opacity:.85;margin-bottom:3px}
+.adot{width:12px;height:12px;border-radius:3px;background:var(--ai);opacity:.75;display:inline-block;margin:2px}
+.hh{margin-top:10px;border:2px dashed var(--human-line);border-radius:10px;padding:8px 10px;background:#fff;font-size:13px}
+.hh b{color:var(--human)}
+.down{display:grid;grid-template-columns:1fr 230px 1fr 230px 1fr;margin:8px 0}
+.down div{text-align:center;color:var(--muted);font-size:13px}
+.ext{border-radius:14px;padding:14px 16px;background:var(--ext-bg);border:1px solid var(--line);display:grid;grid-template-columns:260px 1fr 1fr;gap:14px;align-items:start}
+.panels{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.panels .card{font-size:13.5px}
+.q{border-left:4px solid var(--hyp);background:#fff8ec;border-radius:8px;padding:10px 14px;margin-top:16px;font-size:14px}
+.princ{margin-top:12px;background:var(--kernel);color:#fff;border-radius:12px;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.princ .m{font-size:19px;font-weight:700}
+</style></head><body>
+<div class="head"><div><h1>コミュニケーションデザイン</h1>
+<div class="sub">Chatは入口。Voiceは深い思考。Cardは決断。Dashboardは経営。— 人への情報量はAgent数と切り離す（53, 88章）</div></div>
+<div class="brand"><b>OCEALITE Organization OS</b><br>107章 Communication Design ほか</div></div>
+
+<div class="actors">
+ <div class="actor card h"><div class="t">Human（経営者・社員）</div>
+  <div class="people"><div class="person"><i class="dot"></i>CEO</div><div class="person"><i class="dot"></i>社員</div><div class="person"><i class="dot"></i>社員</div><div class="person"><i class="dot"></i>社員</div></div>
+  <div class="hh"><b>Human ↔ Human</b>：1on1・対話・会議。人が直接伝えるべきこと（評価・悪い知らせ・退職・謝罪）の範囲は <span class="chip c-und">未決定</span></div>
+ </div>
+ <div class="conn">
+  <div class="ar"><b>→ Chat / Voice</b>指示・相談・Coaching</div>
+  <div class="ar"><b>→ Human Correction</b>却下・修正と理由（82章）</div>
+  <div class="ar r"><b>Decision Card ←</b>選択肢・根拠・確からしさ</div>
+  <div class="ar r"><b>Control Tower ←</b>Vision・Return・Risk</div>
+ </div>
+ <div class="actor card a"><div class="t">AI Chief of Staff <span class="chip c-hyp">仮説</span></div>
+  <div style="font-size:13.5px">意図理解・要約・委任・例外管理</div>
+  <div style="font-size:13px;margin-top:8px"><b style="color:var(--ai)">人へ上げる条件（89章）</b><br>High Impact / High Risk / Value Conflict / Budget Exception / Vision Conflict / Irreversible</div>
+  <div style="font-size:13px;margin-top:6px"><b style="color:var(--ai)">成長と幸せの衝突（108-3）</b><br>取り消せない＋影響大 → 人が判断<br>小さな衝突 → AIが判断し定期報告</div>
+ </div>
+ <div class="conn">
+  <div class="ar"><b>→ Delegation</b>Goal・Budget・Authority</div>
+  <div class="ar r"><b>Exception ←</b>例外・判断依頼だけ</div>
+  <div class="ar"><b>AI ↔ AI</b>MCP / A2A <span class="chip c-cand">候補</span>（75–76章）</div>
+ </div>
+ <div class="actor card a"><div class="t">AI Organization</div>
+  <div style="font-size:13.5px">AI Team Leaders → 数百〜数万 Agent。AI OrganizationがAI Organizationを管理する（87章）</div>
+  <div style="margin-top:10px">
+   <i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><br>
+   <i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><br>
+   <i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i><i class="adot"></i>
+  </div>
+ </div>
+</div>
+
+<div class="down"><div>▼ ▲ 関係・信頼・交渉は人</div><div></div><div></div><div></div><div>▼ ▲ 公開・返信はAction Gateway経由</div></div>
+
+<div class="ext">
+ <div><div class="t" style="color:var(--ext);font-size:19px">社外</div><div style="font-size:13.5px">顧客・Partner・地域・SNS上の人々</div></div>
+ <div style="font-size:13.5px"><b>現行の方針</b><br>顧客の声を直接聞く・信頼関係を築くのは人の役割（8章）。外部公開はHuman Approval（80章）</div>
+ <div style="font-size:13.5px"><b>未設計 <span class="chip c-und">未決定</span></b><br>コメント・DMへの返信を誰が担うか／AIであることの開示方針（検証ケース1・2）</div>
+</div>
+
+<div class="panels">
+ <div class="card h"><div class="t">人と人のルール <span class="chip c-und">未決定</span></div>
+  <ul class="b"><li>記録しない場と、記録・保存の同意</li><li>人同士で判断が割れたときのDecision Rights</li><li>Control Towerを誰がどこまで見られるか</li><li>AIが間に入り、人が直接話さなくなる問題</li></ul></div>
+ <div class="card" style="background:#eef7f0;border-color:#b9dcc4"><div class="t" style="color:var(--ok)">幸せの申告 <span class="chip c-ok">方針</span></div>
+  <ul class="b"><li>月1回の短い申告＋1on1</li><li>個人の回答は本人だけが見られる</li><li>組織が使うのは3人以上の集計だけ</li><li>個人の回答は本人が削除でき、退職時に削除</li><li>行動データから感情を推定しない</li></ul></div>
+ <div class="card a"><div class="t">人とAIのやり取りの論点 <span class="chip c-und">未決定</span></div>
+  <ul class="b"><li>Decision Cardの構成と確からしさの示し方</li><li>AIが人に反論する強さ（同調の抑制）</li><li>複数の人から矛盾する指示が来たとき</li><li>AI Chief of Staffは個人別か共有か</li></ul></div>
+</div>
+
+<div class="q"><b>緊張関係：</b>AIが情報を選んで人へ上げる（88–89章）ほど、経営者は顧客の生の声や弱い兆しに触れなくなる（8章）。一次情報に人が直接触れる経路を意図的に残す <span class="chip c-hyp">仮説</span></div>
+<div class="princ"><div><div class="small" style="color:#c7cede">原則案（107-6） <span class="chip c-hyp">仮説</span></div><div class="m">AIは人と人の関係を代わりに担うのではなく、関係を増やすために使う</div></div>
+<div class="small" style="color:#c7cede;text-align:right">目安：人と人が直接話す時間を<br>減らさない（38章 Return on Human Time）</div></div>
+
+<div class="legend">
+ <span><i class="sw" style="background:var(--human-bg)"></i>Human</span><span><i class="sw" style="background:var(--ai-bg)"></i>AI</span><span><i class="sw" style="background:var(--ext-bg)"></i>社外</span>
+ <span><span class="chip c-ok">方針</span></span><span><span class="chip c-hyp">仮説</span></span><span><span class="chip c-und">未決定</span></span><span><span class="chip c-cand">候補</span></span>
+</div>
+</body></html>
